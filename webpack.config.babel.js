@@ -1,7 +1,9 @@
-const HtmlWebpackPlugin = require( "html-webpack-plugin" );
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const WebpackDevServer = require('webpack-dev-server')
+const path = require('path');
 
 module.exports = {
-	entry: './index.js',
+	entry: './js/main.js',
 	output: {
 		filename: './dist/bundle.js'
 	},
@@ -17,7 +19,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template:	"./html.html",
+			template:	"./index.html",
 			inject: 	"body",
 			filename:	"index.html"
 		})
